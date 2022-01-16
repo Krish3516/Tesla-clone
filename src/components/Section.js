@@ -1,14 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Fade } from "react-awesome-reveal";
+
 
 function Section({ title, description, LeftBtnText, RightBtnText, backgroundImg }) {
     return (
         <Wrap bgImage={backgroundImg}>
-            <ItemText>
-                <h1>{ title }</h1>
-                <p>{ description }</p>
-            </ItemText>
+            <Fade>
+                <ItemText>
+                   <h1>{ title }</h1>
+                   <p>{ description }</p>
+                </ItemText>
+            </Fade>
             <Button>
+                <Fade>
             <ButtonGroup>
                 <LeftButton>
                     {  LeftBtnText }
@@ -16,11 +21,10 @@ function Section({ title, description, LeftBtnText, RightBtnText, backgroundImg 
                 {RightBtnText && 
                  <RightButton>
                  { RightBtnText }
-
-             </RightButton>
+                 </RightButton>
                 }
-               
-            </ButtonGroup>
+               </ButtonGroup>
+            </Fade>
             <DownArrow src="/images/down-arrow.svg" />
             </Button>
 
